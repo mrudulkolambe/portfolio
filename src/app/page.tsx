@@ -96,7 +96,7 @@ export default function Home() {
                     <p>Available to work</p>
                   </div>
                   <h2 className="mt-2 text-xl font-bold">Mrudul Kolambe</h2>
-                  <span className="mt-5 text-sm text-gray-400">I'm a<FlipWords className="font-semibold text-[#A08EF8]" words={["Web Developer", "FullStack Developer", "MERN stack developer", "Devops Engineer"]} /></span>
+                  <span className="mt-5 text-sm text-gray-400">I&apos;m a<FlipWords className="font-semibold text-[#A08EF8]" words={["Web Developer", "FullStack Developer", "MERN stack developer", "Devops Engineer"]} /></span>
                 </div>
               </div>
               <div className="mt-4 bg-secondary/50 p-3 w-full rounded-2xl flex flex-wrap gap-x-3 gap-y-2 border border-tertiary/30">
@@ -156,8 +156,8 @@ export default function Home() {
                 <img className="h-[28px] w-[28px]" src="https://framerusercontent.com/images/RNhprVgPRIRYVpd0baDySQLMk.svg" alt="" />
               </span>
               <div className="mt-3">
-                <h2 className="text-lg font-bold text-white text-center">Let's Work Together</h2>
-                <p className="text-gray-400 text-sm text-center mt-1">Let's Make Magic Happen Together!</p>
+                <h2 className="text-lg font-bold text-white text-center">Let&apos;s Work Together</h2>
+                <p className="text-gray-400 text-sm text-center mt-1">Let&apos;s Make Magic Happen Together!</p>
               </div>
               <div className="flex flex-col mt-2 gap-2.5 w-full">
                 <GlowButton child={<><img className="h-5 w-5" src="https://framerusercontent.com/images/1i79OSogPnkvzpCkZ3nqdP1UKWY.svg" /> <p>Schedule Call</p></>} />
