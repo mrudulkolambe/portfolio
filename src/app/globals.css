@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --t: 40s;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,16 +19,97 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.main {
+  flex: 0.6 0 0;
+}
+
+.bento-item-flex {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column
+}
+
+@layer components {
+  .bento-item {
+    @apply bg-primary border border-secondary rounded-3xl p-5 overflow-hidden h-full;
   }
+
+  .small-card {
+    @apply h-fit p-2 rounded-xl bg-secondary text-grey text-sm font-semibold w-full;
+  }
+
+  .link-animate {
+    @apply group-hover:-rotate-45 rotate-0 duration-200 transition-all origin-center opacity-0 group-hover:opacity-80 delay-150;
+  }
+}
+
+h1 {
+  font-weight: bold;
+  background: -webkit-linear-gradient(#eee, #6f6f6f, #060606);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.plus {
+  font-weight: bold;
+  background: -webkit-linear-gradient(rgb(162, 144, 252), #696969);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.purple-button {
+  background: radial-gradient(73.9583% 281.25% at 19.1667% 82.2917%, rgb(179, 164, 253) 0%, rgb(162, 144, 252) 49.3123%);
+}
+
+
+.scroll {
+  position: relative;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
+}
+
+.scroll .scroll-c {
+  white-space: nowrap;
+  animation: animatescroll var(--t) linear infinite;
+  animation-delay: calc(var(--t) * -1);
+}
+.scroll .scroll-c:nth-child(2) {
+  white-space: nowrap;
+  animation: animatescroll2 var(--t) linear infinite;
+  animation-delay: calc(var(--t) / -2);
+}
+
+@keyframes animatescroll {
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+@keyframes animatescroll2 {
+  0%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(-200%);
+  }
+}
+
+.scroll .scroll-c .small-card {
+  display: inline-flex !important;
+  margin: 5px;
+}
+
+
+.scroll .scroll-c .work-card {
+  display: inline-flex !important;
+  margin: 5px;
 }
