@@ -1,15 +1,3 @@
-"use client"
-
-import React, { useEffect } from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, FreeMode, } from 'swiper/modules'
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/autoplay';
-import 'swiper/css/free-mode';
-import StackCard from './StackCard';
-import ImgSlider from './ImgSlider';
 import services from '@/utils/service';
 import ServiceCard from './ServiceCard';
 

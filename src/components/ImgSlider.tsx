@@ -1,6 +1,3 @@
-'use client';
-
-import styled, { keyframes, css } from "styled-components";
 import StackCard from "./StackCard";
 
 

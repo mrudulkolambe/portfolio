@@ -93,7 +93,8 @@ const Desktop = () => {
 					<div className="row-span-4 bento-item">
 						<div className="flex flex-col">
 							<div className="flex gap-4">
-								<img className="h-[105px] w-[100px] object-cover rounded-2xl bg-[#A290FC]" src="/assets/asdasdmain.png" alt="" />
+								<img className="h-[105px] w-[100px] object-cover rounded-2xl bg-[#A290FC]" src="/assets/main.png" alt="" />
+								{/* <img className="h-[105px] w-[100px] object-cover rounded-2xl bg-[#A290FC]" src="/mrudul.png" alt="" /> */}
 								<div className='flex items-start justify-center flex-col w-full'>
 									<div className='flex items-center justify-between w-full'>
 										<div className="h-max text-gray-400 font-semibold bg-secondary p-2 px-5 rounded-full w-max text-sm flex items-center">

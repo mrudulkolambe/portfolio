@@ -4,7 +4,7 @@ import ClientCard from './ClientCard'
 
 const ClientsSlider = () => {
 	return (
-		<div className='absolute flex items-center flex-col justify-center w-full gap-3'>
+		<div className='absolute flex items-center flex-col justify-center w-full gap-2.5'>
 			<div className="scroll">
 				<div className="scroll-c flex gap-x-3">
 					{
