@@ -17,7 +17,7 @@ const Mobile = () => {
 			<div className="bento-item p-3 overflow-x-hidden">
 				<div className="flex flex-col">
 					<div className="flex gap-3">
-						<img className="min-h-[105px] max-h-[105px] min-w-[100px] object-cover rounded-2xl bg-[#A290FC]" src="/assets/asdasdmain.png" alt="" />
+						<img className="min-h-[105px] max-h-[105px] min-w-[100px] object-cover rounded-2xl bg-[#A290FC]" src="/assets/main.png" alt="" />
 						<div>
 							<div className="h-max text-gray-400 font-semibold bg-secondary p-2 px-5 rounded-full w-max text-sm flex items-center">
 								<div className="relative flex items-center justify-center mr-4">
