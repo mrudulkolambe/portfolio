@@ -18,6 +18,7 @@
 }
 
 body {
+  overflow-x: hidden !important;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom,
       transparent,
@@ -36,7 +37,7 @@ body {
 
 @layer components {
   .bento-item {
-    @apply bg-primary border border-secondary rounded-3xl p-5 overflow-hidden h-full;
+    @apply bg-primary border border-secondary rounded-3xl lg:p-5 h-full p-3;
   }
 
   .small-card {
