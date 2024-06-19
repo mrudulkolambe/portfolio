@@ -1,4 +1,5 @@
 import AboutInfoCard from '@/components/AboutInfoCard'
+import ClientsSlider from '@/components/ClientsSlider'
 import { FlipWords } from '@/components/FlipWords'
 import GlowButton from '@/components/GlowButton'
 import ServiceCard from '@/components/ServiceCard'
@@ -102,7 +103,7 @@ const Desktop = () => {
 											</div>
 											<p>Available to work</p>
 										</div>
-										<a target='_blank' href='https://drive.google.com/file/d/1XexD-AolcCHFnj90mdL36uAsokN01XOG/view?usp=drive_link' className='h-8 w-8 rounded-lg bg-tertiary flex items-center justify-center'><img className='h-5 w-5' src="/icons/download.svg" alt="" /></a>
+										<div className='flex items-center justify-center gap-2 text-gray-400 cursor-pointer'><p className='text-sm font-bold'>Resume</p><a target='_blank' href='https://drive.google.com/file/d/1XexD-AolcCHFnj90mdL36uAsokN01XOG/view?usp=drive_link' className='h-8 w-8 rounded-lg bg-tertiary flex items-center justify-center'><img className='h-5 w-5' src="/icons/download.svg" alt="" /></a></div>
 									</div>
 									<div className='flex flex-col items-start justify-center'>
 										<h2 className="mt-2 text-xl font-bold">Mrudul Kolambe</h2>
@@ -125,7 +126,15 @@ const Desktop = () => {
 					</div>
 
 					{/* 3rd item */}
-					<div className="row-span-3 bento-item"></div>
+					<div className="row-span-3 bento-item bento-item-flex">
+						<div className="flex items-center flex-col w-full">
+							<span className="flex items-center justify-center gap-2 text-white/50 text-sm"><img src="/icons/clients.svg" className="h-5 w-5" alt="" /> My Clients</span>
+							<p className="text-center font-semibold mt-1">Satisfied Partners</p>
+						</div>
+						<div className='w-full h-full relative flex items-center overflow-hidden'>
+							<ClientsSlider/>
+						</div>
+					</div>
 				</div>
 
 
