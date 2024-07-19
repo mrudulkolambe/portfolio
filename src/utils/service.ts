@@ -1,11 +1,23 @@
 const services = [
 	{
 		title: "Web Development",
-		img: 'https://framerusercontent.com/images/8m3vpxwjPd9KqJSt4RmKKimrU0E.svg'
+		img: '/icons/web-dev.svg'
+	},
+	{
+		title: "App Design",
+		img: '/icons/ui-ux.svg'
 	},
 	{
 		title: "App Development",
-		img: 'https://framerusercontent.com/images/OsWJpH6lavja2Nn28QhDLbUvJUE.svg'
+		img: '/icons/app-dev.svg'
+	},
+	{
+		title: "Web Design",
+		img: '/icons/ui-ux.svg'
+	},
+	{
+		title: "No Code Development",
+		img: '/icons/no-code.svg'
 	},
 ]
 

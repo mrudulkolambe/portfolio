@@ -18,7 +18,7 @@
 }
 
 body {
-  overflow: hidden !important;
+  overflow-x: hidden !important;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom,
       transparent,
@@ -81,6 +81,7 @@ h1 {
   animation: animatescroll var(--t) linear infinite;
   animation-delay: calc(var(--t) * -1);
 }
+
 .scroll .scroll-c:nth-child(2) {
   white-space: nowrap;
   animation: animatescroll2 var(--t) linear infinite;
@@ -88,18 +89,21 @@ h1 {
 }
 
 @keyframes animatescroll {
-  0%{
+  0% {
     transform: translateX(100%);
   }
-  100%{
+
+  100% {
     transform: translateX(-100%);
   }
 }
+
 @keyframes animatescroll2 {
-  0%{
+  0% {
     transform: translateX(0%);
   }
-  100%{
+
+  100% {
     transform: translateX(-200%);
   }
 }
@@ -113,4 +117,17 @@ h1 {
 .scroll .scroll-c .work-card {
   display: inline-flex !important;
   margin: 5px;
+}
+
+/* .bento-item {
+  animation: bentoload 1s normal 0s 1 forwards;
+} */
+
+@keyframes bentoload {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

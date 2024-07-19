@@ -5,15 +5,15 @@ import ClientCard from './ClientCard'
 const ClientsSlider = () => {
 	return (
 		<div className='absolute flex items-center flex-col justify-center w-full gap-2.5'>
-			<div className="scroll">
-				<div className="scroll-c flex gap-x-3">
+			<div className="scroll gap-0">
+				<div className="pr-1.5 pl-1.5 scroll-c flex gap-x-3">
 					{
 						clients.map((client, index) => {
 							return <ClientCard key={`1-${index}`} src={client} />
 						})
 					}
 				</div>
-				<div className="scroll-c flex gap-x-3">
+				<div className="pr-1.5 pl-1.5 scroll-c flex gap-x-3">
 					{
 						clients.map((client, index) => {
 							return <ClientCard key={`2-${index}`} src={client} />
@@ -21,8 +21,8 @@ const ClientsSlider = () => {
 					}
 				</div>
 			</div>
-			<div className="scroll">
-				<div className="scroll-c flex gap-x-3" style={{
+			<div className="scroll gap-0">
+				<div className="pr-1.5 pl-1.5 scroll-c flex gap-x-3" style={{
 					animationDirection: 'reverse'
 				}}>
 					{
@@ -31,7 +31,7 @@ const ClientsSlider = () => {
 						})
 					}
 				</div>
-				<div className="scroll-c flex gap-x-3" style={{
+				<div className="pr-1.5 pl-1.5 scroll-c flex gap-x-3" style={{
 					animationDirection: 'reverse'
 				}}>
 					{

@@ -2,6 +2,7 @@ import AboutInfoCard from '@/components/AboutInfoCard'
 import ClientsSlider from '@/components/ClientsSlider'
 import { FlipWords } from '@/components/FlipWords'
 import GlowButton from '@/components/GlowButton'
+import { MotionDiv } from '@/components/MotionDiv'
 import ServiceCard from '@/components/ServiceCard'
 import ServiceSlider from '@/components/ServiceSlider'
 import StackCard from '@/components/StackCard'
@@ -9,16 +10,26 @@ import WorkSlider from '@/components/WorkSlider'
 import WorkflowInfo from '@/components/WorkflowInfo'
 import socials from '@/utils/social'
 import workflow from '@/utils/workflow'
+import Link from 'next/link'
 import React from 'react'
 
 const Desktop = () => {
+
+	const variants = {
+		hidden: { opacity: 0 },
+		visible: { opacity: 1 }
+	}
 	return (
 		<main className="lg:flex min-h-[740px] h-screen w-screen flex-col items-center justify-center p-8 hidden">
 
-			<div className="gap-3 grid grid-cols-12 w-full h-full max-h-[780px]">
+			<div className="gap-3 grid grid-cols-12 w-full h-full">
 				<div className="h-full col-span-3 main gap-3 flex flex-col">
 
-					<div className="bento-item bento-item-flex justify-between">
+					<MotionDiv variants={variants} initial='hidden' animate='visible' viewport={{ amount: 0 }} transition={{
+						delay: 0.10,
+						ease: 'easeInOut',
+						duration: 0.5
+					}} className="bento-item bento-item-flex justify-between">
 						<div className="flex items-center flex-col">
 							<span className="flex items-center justify-center gap-2 text-white/50 text-sm"><img src="/icons/stack.svg" className="h-5 w-5" alt="" /> My Stacks</span>
 							<p className="text-center font-semibold mt-1">Tech Arsenal</p>
@@ -29,18 +40,26 @@ const Desktop = () => {
 							<StackCard img="/assets/tailwind.svg" link="https://tailwindcss.com/" title="Tailwind" />
 							<StackCard img="/assets/flutter.svg" link="https://flutter.dev/" title="Flutter" />
 						</div>
-					</div>
-					<div className="bento-item bento-item-flex relative gap-5 px-0">
+					</MotionDiv>
+					<MotionDiv variants={variants} initial='hidden' animate='visible' viewport={{ amount: 0 }} transition={{
+						delay: 0.20,
+						ease: 'easeInOut',
+						duration: 0.5
+					}} className="bento-item bento-item-flex relative gap-5 px-0">
 						<div className="flex items-center flex-col px-5">
 							<span className="flex items-center justify-center gap-2 text-white/50 text-sm"><img src="/icons/projects.svg" className="h-5 w-5" alt="" /> Projects</span>
 							<p className="text-center font-semibold mt-1">Works Gallery</p>
 						</div>
 						<WorkSlider />
 						<div className="absolute bottom-8 z-[10] left-1/2 -translate-x-1/2 p-1 rounded-xl bg-tertiary/70 backdrop-blur-md w-max">
-							<button className="text-sm purple-button px-7 py-2.5 text-black/80 font-semibold rounded-xl">View Works</button>
+							<Link href={"/works"}><button className="text-sm purple-button px-7 py-2.5 text-black/80 font-semibold rounded-xl">View Works</button></Link>
 						</div>
-					</div>
-					<div className="bento-item bento-item-flex relative gap-5 px-0">
+					</MotionDiv>
+					<MotionDiv variants={variants} initial='hidden' animate='visible' viewport={{ amount: 0 }} transition={{
+						delay: 0.30,
+						ease: 'easeInOut',
+						duration: 0.5
+					}} className="bento-item bento-item-flex relative gap-5 px-0">
 						<div className="flex items-center flex-col px-5">
 							<span className="flex items-center justify-center gap-2 text-white/50 text-sm"><img src="/icons/services.svg" className="h-5 w-5" alt="" /> Services</span>
 							<p className="text-center font-semibold mt-1">Solutions Suite</p>
@@ -51,7 +70,7 @@ const Desktop = () => {
 						<div className="absolute bottom-8 z-[10] left-1/2 -translate-x-1/2 p-1 rounded-xl bg-tertiary/70 backdrop-blur-md w-max">
 							<button className="text-sm purple-button px-7 py-2.5 text-black/80 font-semibold rounded-xl">View Services</button>
 						</div>
-					</div>
+					</MotionDiv>
 
 				</div>
 				{/* Second Col */}
@@ -59,7 +78,11 @@ const Desktop = () => {
 					{/* 1st item */}
 					<div className="row-span-2 flex flex-0 gap-3 h-full">
 
-						<div className="flex-0 bento-item bento-item-flex justify-between px-3">
+						<MotionDiv variants={variants} initial='hidden' animate='visible' viewport={{ amount: 0 }} transition={{
+							delay: 0.40,
+							ease: 'easeInOut',
+							duration: 0.5
+						}} className="flex-0 bento-item bento-item-flex justify-between px-3">
 							<div className="flex items-center gap-1 justify-center">
 								<h1 className="text-6xl">09</h1>
 								<h3 className="text-3xl font-bold plus">+</h3>
@@ -67,18 +90,26 @@ const Desktop = () => {
 							<div className="w-full rounded-full bg-secondary/50 border border-secondary px-2 py-1.5 text-center">
 								<p className="h-max flex gap-1 items-center justify-center text-xs font-semibold text-grey"><img className="h-[18px] w-[18px]" src="/icons/projects.svg" alt="" />Projects</p>
 							</div>
-						</div>
+						</MotionDiv>
 
-						<div className="flex-0 bento-item bento-item-flex justify-between px-3">
+						<MotionDiv variants={variants} initial='hidden' animate='visible' viewport={{ amount: 0 }} transition={{
+							delay: 0.50,
+							ease: 'easeInOut',
+							duration: 0.5
+						}} className="flex-0 bento-item bento-item-flex justify-between px-3">
 							<div className="flex items-center gap-1 justify-center">
 								<h1 className="text-6xl">07</h1>
 								<h3 className="text-3xl font-bold plus">+</h3>
 							</div>
 							<div className="w-full rounded-full bg-secondary/50 border border-secondary px-2 py-1.5 text-center">
-								<p className="h-max flex gap-1 items-center justify-center text-xs font-semibold text-grey"><img className="h-[18px] w-[18px]" src="/icons/services.svg" alt="" />Happy Clients</p>
+								<p className="h-max flex gap-1 items-center justify-center text-xs font-semibold text-grey"><img className="h-[18px] w-[18px]" src="/icons/happy.svg" alt="" />Happy Clients</p>
 							</div>
-						</div>
-						<div className="flex-0 bento-item bento-item-flex justify-between px-3">
+						</MotionDiv>
+						<MotionDiv variants={variants} initial='hidden' animate='visible' viewport={{ amount: 0 }} transition={{
+							delay: 0.60,
+							ease: 'easeInOut',
+							duration: 0.5
+						}} className="flex-0 bento-item bento-item-flex justify-between px-3">
 							<div className="flex items-center gap-1 justify-center">
 								<h1 className="text-6xl">03</h1>
 								<h3 className="text-3xl font-bold plus">+</h3>
@@ -86,11 +117,15 @@ const Desktop = () => {
 							<div className="w-full rounded-full bg-secondary/50 border border-secondary px-2 py-1.5 text-center">
 								<p className="h-max flex gap-1 items-center justify-center text-xs font-semibold text-grey"><img className="h-[18px] w-[18px]" src="/icons/experience.svg" alt="" />Year Expertise</p>
 							</div>
-						</div>
+						</MotionDiv>
 
 					</div>
 					{/* 2nd item */}
-					<div className="row-span-4 bento-item">
+					<MotionDiv variants={variants} initial='hidden' animate='visible' viewport={{ amount: 0 }} transition={{
+						delay: 0.70,
+						ease: 'easeInOut',
+						duration: 0.5
+					}} className="row-span-4 bento-item">
 						<div className="flex flex-col">
 							<div className="flex gap-4">
 								<img className="h-[105px] w-[100px] object-cover rounded-2xl bg-[#A290FC]" src="/assets/main.png" alt="" />
@@ -117,32 +152,52 @@ const Desktop = () => {
 								<AboutInfoCard img="/icons/language.svg" title="English & Hindi" />
 								<AboutInfoCard img="/icons/degree.svg" title="Computer Engineer" />
 								<AboutInfoCard img="/icons/freelancer.svg" title="Freelancer" />
-								<AboutInfoCard img="/icons/language.svg" title="Good Boy" />
+								<AboutInfoCard img="/icons/good.svg" title="Good Boy" />
 							</div>
 							<div className="mt-3 gap-3 flex items-center">
 								<GlowButton child={<><img className="h-5 w-5" src="/icons/whatsapp.svg" /> <p>Whatsapp me</p></>} />
 								<GlowButton child={<><img className="h-5 w-5" src="/icons/email.svg" /> <p>Email me</p></>} />
 							</div>
 						</div>
-					</div>
+					</MotionDiv>
 
 					{/* 3rd item */}
-					<div className="row-span-3 bento-item bento-item-flex">
+					<MotionDiv variants={variants} initial='hidden' animate='visible' viewport={{ amount: 0 }} transition={{
+						delay: 0.80,
+						ease: 'easeInOut',
+						duration: 0.5
+					}} className="row-span-3 bento-item bento-item-flex">
 						<div className="flex items-center flex-col w-full">
 							<span className="flex items-center justify-center gap-2 text-white/50 text-sm"><img src="/icons/clients.svg" className="h-5 w-5" alt="" /> My Clients</span>
 							<p className="text-center font-semibold mt-1">Satisfied Partners</p>
 						</div>
 						<div className='w-full h-full relative flex items-center overflow-hidden'>
-							<ClientsSlider/>
+							<ClientsSlider />
 						</div>
-					</div>
+					</MotionDiv>
 				</div>
 
 
 				<div className="h-full col-span-5 grid grid-rows-9 gap-3">
 					<div className="h-full row-span-5 grid grid-cols-9 gap-3">
-						<div className="h-full bento-item col-span-5"></div>
-						<div className="h-full bento-item col-span-4 bento-item-flex px-0">
+						<MotionDiv variants={variants} initial='hidden' animate='visible' viewport={{ amount: 0 }} transition={{
+							delay: 0.90,
+							ease: 'easeInOut',
+							duration: 0.5
+						}} className="h-full bento-item col-span-5">
+							<div className="flex flex-col items-center px-5 overflow-hidden pb-3">
+								<span className="flex items-center justify-center gap-2 text-white/50 text-sm">
+									<img src="/icons/achievement.svg" className="h-5 w-5 object-cover" alt="" /> Accomplishments
+								</span>
+								<p className="text-center font-semibold mt-1 overflow-hidden">Achievements</p>
+							</div>
+
+						</MotionDiv>
+						<MotionDiv variants={variants} initial='hidden' animate='visible' viewport={{ amount: 0 }} transition={{
+							delay: 1.0,
+							ease: 'easeInOut',
+							duration: 0.5
+						}} className="h-full bento-item col-span-4 bento-item-flex px-0">
 							<div className="flex flex-col items-center px-5 overflow-hidden pb-3">
 								<span className="flex items-center justify-center gap-2 text-white/50 text-sm">
 									<img src="/icons/work_process.svg" className="h-5 w-5 object-cover" alt="" /> Work Process
@@ -158,10 +213,14 @@ const Desktop = () => {
 									})
 								}
 							</div>
-						</div>
+						</MotionDiv>
 					</div>
 					<div className="h-full row-span-4 grid grid-cols-9 gap-3">
-						<div className="h-full bento-item col-span-4 px-0">
+						<MotionDiv variants={variants} initial='hidden' animate='visible' viewport={{ amount: 0 }} transition={{
+							delay: 1.10,
+							ease: 'easeInOut',
+							duration: 0.5
+						}} className="h-full bento-item col-span-4 px-0">
 							<div className="flex flex-col items-center px-5 overflow-hidden pb-3">
 								<span className="flex items-center justify-center gap-2 text-white/50 text-sm">
 									<img src="/icons/follow.svg" className="h-5 w-5 object-cover" alt="" /> Follow Me
@@ -175,8 +234,12 @@ const Desktop = () => {
 									})
 								}
 							</div>
-						</div>
-						<div className="h-full bento-item col-span-5 flex flex-col items-center justify-evenly">
+						</MotionDiv>
+						<MotionDiv variants={variants} initial='hidden' animate='visible' viewport={{ amount: 0 }} transition={{
+							delay: 1.20,
+							ease: 'easeInOut',
+							duration: 0.5
+						}} className="h-full bento-item col-span-5 flex flex-col items-center justify-evenly">
 							<span className="h-[56px] w-[56px] bg-secondary flex items-center justify-center rounded-full">
 								<img className="h-[28px] w-[28px]" src="/icons/work_together.svg" alt="" />
 							</span>
@@ -185,10 +248,10 @@ const Desktop = () => {
 								<p className="text-gray-400 text-sm text-center mt-1">Let&apos;s Make Magic Happen Together!</p>
 							</div>
 							<div className="flex flex-col mt-2 gap-2.5 w-full">
-								<GlowButton child={<><img className="h-5 w-5" src="/icons/schedule.svg" /> <p>Schedule Call</p></>} />
-								<GlowButton child={<><img className="h-5 w-5" src="/icons/whatsapp.svg" /> <p>Whatsapp me</p></>} />
+								<a href="https://cal.com/mrudulkolambe/general-discussion" target='_blank'><GlowButton child={<><img className="h-5 w-5" src="/icons/schedule.svg" /> <p>Schedule Call</p></>} /></a>
+								<a href="https://wa.me/+917057094772"><GlowButton child={<><img className="h-5 w-5" src="/icons/whatsapp.svg" /> <p>Whatsapp me</p></>} /></a>
 							</div>
-						</div>
+						</MotionDiv>
 					</div>
 				</div>
 			</div>
