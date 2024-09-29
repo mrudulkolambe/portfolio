@@ -1,12 +1,14 @@
 import AboutInfoCard from '@/components/AboutInfoCard'
 import { FlipWords } from '@/components/FlipWords'
 import GlowButton from '@/components/GlowButton'
+import Image from '@/components/Image'
 import ServiceCard from '@/components/ServiceCard'
 import ServiceSlider from '@/components/ServiceSlider'
 import StackCard from '@/components/StackCard'
 import WorkSlider from '@/components/WorkSlider'
 import WorkflowInfo from '@/components/WorkflowInfo'
 import socials from '@/utils/social'
+import { size } from '@/utils/utils'
 import workflow from '@/utils/workflow'
 import React from 'react'
 
@@ -17,7 +19,7 @@ const Mobile = () => {
 			<div className="bento-item p-3 overflow-x-hidden">
 				<div className="flex flex-col">
 					<div className="flex gap-3">
-						<img className="min-h-[105px] max-h-[105px] min-w-[100px] object-cover rounded-2xl bg-[#A290FC]" src="/assets/main.png" alt="" />
+						<Image height={105} width={100} className="min-h-[105px] max-h-[105px] min-w-[100px] object-cover rounded-2xl bg-[#A290FC]" src="/assets/main.png" alt="" />
 						<div>
 							<div className="h-max text-gray-400 font-semibold bg-secondary p-2 px-5 rounded-full w-max text-sm flex items-center">
 								<div className="relative flex items-center justify-center mr-4">
@@ -38,8 +40,8 @@ const Mobile = () => {
 						<AboutInfoCard img="/icons/good.svg" title="Good Boy" />
 					</div>
 					<div className="mt-3 gap-3 flex items-center">
-						<GlowButton child={<><img className="h-5 w-5" src="/icons/whatsapp.svg" /> <p>Whatsapp me</p></>} />
-						<GlowButton child={<><img className="h-5 w-5" src="/icons/email.svg" /> <p>Email me</p></>} />
+						<GlowButton child={<><Image size={20} alt='' src="/icons/whatsapp.svg" /> <p>Whatsapp me</p></>} />
+						<GlowButton child={<><Image size={20} alt='' src="/icons/email.svg" /> <p>Email me</p></>} />
 					</div>
 				</div>
 			</div>
@@ -52,7 +54,7 @@ const Mobile = () => {
 						<h3 className="text-3xl font-bold plus">+</h3>
 					</div>
 					<div className="w-full rounded-full bg-secondary/50 border border-secondary px-2 py-1.5 text-center">
-						<p className="h-max flex gap-1 items-center justify-center text-xs font-semibold text-grey"><img className="h-[18px] w-[18px]" src="/icons/flag.svg" alt="" />Projects</p>
+						<p className="h-max flex gap-1 items-center justify-center text-xs font-semibold text-grey"><Image size={18} src="/icons/flag.svg" alt="" />Projects</p>
 					</div>
 				</div>
 
@@ -62,7 +64,7 @@ const Mobile = () => {
 						<h3 className="text-3xl font-bold plus">+</h3>
 					</div>
 					<div className="w-full rounded-full bg-secondary/50 border border-secondary px-2 py-1.5 text-center">
-						<p className="h-max flex gap-1 items-center justify-center text-xs font-semibold text-grey"><img className="h-[18px] w-[18px]" src="/icons/happy.svg" alt="" />Happy Clients</p>
+						<p className="h-max flex gap-1 items-center justify-center text-xs font-semibold text-grey"><Image size={18} src="/icons/happy.svg" alt="" />Happy Clients</p>
 					</div>
 				</div>
 
@@ -72,19 +74,19 @@ const Mobile = () => {
 						<h3 className="text-3xl font-bold plus">+</h3>
 					</div>
 					<div className="w-full rounded-full bg-secondary/50 border border-secondary px-2 py-1.5 text-center">
-						<p className="h-max flex gap-1 items-center justify-center text-xs font-semibold text-grey"><img className="h-[18px] w-[18px]" src="https://framerusercontent.com/images/BwWdTTsCmCvWVRIwVB2vLrPGY.svg" alt="" />Year Expertise</p>
+						<p className="h-max flex gap-1 items-center justify-center text-xs font-semibold text-grey"><Image size={18} src="https://framerusercontent.com/images/BwWdTTsCmCvWVRIwVB2vLrPGY.svg" alt="" />Year Expertise</p>
 					</div>
 				</div>
 
 				<a target='_blank' href='https://drive.google.com/file/d/1XexD-AolcCHFnj90mdL36uAsokN01XOG/view?usp=drive_link' className="flex-0 bento-item bento-item-flex justify-center px-3">
-					<div className='flex items-center justify-center gap-1'>Resume <span className='h-8 w-8 rounded-lg bg-tertiary flex items-center justify-center'><img className='h-5 w-5' src="/icons/download.svg" alt="" /></span></div>
+					<div className='flex items-center justify-center gap-1'>Resume <span className='h-8 w-8 rounded-lg bg-tertiary flex items-center justify-center'><Image size={20} src="/icons/download.svg" alt="" /></span></div>
 				</a>
 
 			</div>
 
 			<div className="bento-item bento-item-flex justify-between h-max">
 				<div className="flex items-center flex-col">
-					<span className="flex items-center justify-center gap-2 text-white/50 text-sm"><img src="/icons/stack.svg" className="h-5 w-5" alt="" /> My Stacks</span>
+					<span className="flex items-center justify-center gap-2 text-white/50 text-sm"><Image src="/icons/stack.svg" size={20} alt="" /> My Stacks</span>
 					<p className="text-center font-semibold mt-1">Tech Arsenal</p>
 				</div>
 				<div className="grid grid-cols-2 gap-3 w-full h-max mt-3">
@@ -97,7 +99,7 @@ const Mobile = () => {
 
 			<div className="bento-item bento-item-flex relative gap-5 px-0">
 				<div className="flex items-center flex-col px-5">
-					<span className="flex items-center justify-center gap-2 text-white/50 text-sm"><img src="/icons/projects.svg" className="h-5 w-5" alt="" /> Projects</span>
+					<span className="flex items-center justify-center gap-2 text-white/50 text-sm"><Image src="/icons/projects.svg" size={20} alt="" /> Projects</span>
 					<p className="text-center font-semibold mt-1">Works Gallery</p>
 				</div>
 				<WorkSlider />
@@ -108,7 +110,7 @@ const Mobile = () => {
 
 			<div className="bento-item bento-item-flex relative gap-5 px-0">
 				<div className="flex items-center flex-col px-5">
-					<span className="flex items-center justify-center gap-2 text-white/50 text-sm"><img src="/icons/services.svg" className="h-5 w-5" alt="" /> Services</span>
+					<span className="flex items-center justify-center gap-2 text-white/50 text-sm"><Image src="/icons/services.svg" size={20} alt="" /> Services</span>
 					<p className="text-center font-semibold mt-1">Solutions Suite</p>
 				</div>
 				<div>
@@ -122,7 +124,7 @@ const Mobile = () => {
 			<div className="h-full bento-item bento-item-flex px-0">
 				<div className="flex flex-col items-center px-5 overflow-hidden pb-3">
 					<span className="flex items-center justify-center gap-2 text-white/50 text-sm">
-						<img src="/icons/work_process.svg" className="h-5 w-5 object-cover" alt="" /> Work Process
+						<Image src="/icons/work_process.svg" size={20} className="object-cover" alt="" /> Work Process
 					</span>
 					<p className="text-center font-semibold mt-1 overflow-hidden">Workflow Highlights</p>
 				</div>
@@ -140,7 +142,7 @@ const Mobile = () => {
 			<div className="h-full bento-item px-0">
 				<div className="flex flex-col items-center px-5 overflow-hidden pb-3">
 					<span className="flex items-center justify-center gap-2 text-white/50 text-sm">
-						<img src="/icons/follow.svg" className="h-5 w-5 object-cover" alt="" /> Follow Me
+						<Image src="/icons/follow.svg" size={20} className="object-cover" alt="" /> Follow Me
 					</span>
 					<p className="text-center font-semibold mt-1 overflow-hidden">Online Presence</p>
 				</div>
@@ -155,15 +157,15 @@ const Mobile = () => {
 
 			<div className="h-full bento-item flex flex-col items-center justify-evenly">
 				<span className="h-[56px] w-[56px] bg-secondary flex items-center justify-center rounded-full">
-					<img className="h-[28px] w-[28px]" src="/icons/work_together.svg" alt="" />
+					<Image size={28} src="/icons/work_together.svg" alt="" />
 				</span>
 				<div className="mt-3">
 					<h2 className="text-lg font-bold text-white text-center">Let&apos;s Work Together</h2>
 					<p className="text-gray-400 text-sm text-center mt-1">Let&apos;s Make Magic Happen Together!</p>
 				</div>
 				<div className="flex flex-col mt-2 gap-2.5 w-full">
-					<GlowButton child={<><img className="h-5 w-5" src="/icons/schedule.svg" /> <p>Schedule Call</p></>} />
-					<GlowButton child={<><img className="h-5 w-5" src="/icons/whatsapp.svg" /> <p>Whatsapp me</p></>} />
+					<GlowButton child={<><Image alt='' size={20} src="/icons/schedule.svg" /> <p>Schedule Call</p></>} />
+					<GlowButton child={<><Image alt='' size={20} src="/icons/whatsapp.svg" /> <p>Whatsapp me</p></>} />
 				</div>
 			</div>
 		</main>

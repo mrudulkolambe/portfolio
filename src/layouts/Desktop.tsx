@@ -2,6 +2,7 @@ import AboutInfoCard from '@/components/AboutInfoCard'
 import ClientsSlider from '@/components/ClientsSlider'
 import { FlipWords } from '@/components/FlipWords'
 import GlowButton from '@/components/GlowButton'
+import Image from '@/components/Image'
 import { MotionDiv } from '@/components/MotionDiv'
 import ServiceCard from '@/components/ServiceCard'
 import ServiceSlider from '@/components/ServiceSlider'
@@ -20,9 +21,9 @@ const Desktop = () => {
 		visible: { opacity: 1 }
 	}
 	return (
-		<main className="lg:flex min-h-[740px] h-screen w-screen flex-col items-center justify-center p-8 hidden">
+		<main className="lg:flex h-screen w-screen flex-col items-center justify-center px-8 hidden">
 
-			<div className="gap-3 grid grid-cols-12 w-full h-full">
+			<div className="gap-3 grid grid-cols-12 w-full h-max">
 				<div className="h-full col-span-3 main gap-3 flex flex-col">
 
 					<MotionDiv variants={variants} initial='hidden' animate='visible' viewport={{ amount: 0 }} transition={{
@@ -31,7 +32,7 @@ const Desktop = () => {
 						duration: 0.5
 					}} className="bento-item bento-item-flex justify-between">
 						<div className="flex items-center flex-col">
-							<span className="flex items-center justify-center gap-2 text-white/50 text-sm"><img src="/icons/stack.svg" className="h-5 w-5" alt="" /> My Stacks</span>
+							<span className="flex items-center justify-center gap-2 text-white/50 text-sm"><Image height={20} width={20} className="h-5 w-5" alt="" src="/icons/stack.svg" /> My Stacks</span>
 							<p className="text-center font-semibold mt-1">Tech Arsenal</p>
 						</div>
 						<div className="grid grid-cols-2 gap-3 w-full h-max">
@@ -47,7 +48,7 @@ const Desktop = () => {
 						duration: 0.5
 					}} className="bento-item bento-item-flex relative gap-5 px-0">
 						<div className="flex items-center flex-col px-5">
-							<span className="flex items-center justify-center gap-2 text-white/50 text-sm"><img src="/icons/projects.svg" className="h-5 w-5" alt="" /> Projects</span>
+							<span className="flex items-center justify-center gap-2 text-white/50 text-sm"><Image height={20} width={20} className="h-5 w-5" alt="" src="/icons/projects.svg" /> Projects</span>
 							<p className="text-center font-semibold mt-1">Works Gallery</p>
 						</div>
 						<WorkSlider />
@@ -61,7 +62,7 @@ const Desktop = () => {
 						duration: 0.5
 					}} className="bento-item bento-item-flex relative gap-5 px-0">
 						<div className="flex items-center flex-col px-5">
-							<span className="flex items-center justify-center gap-2 text-white/50 text-sm"><img src="/icons/services.svg" className="h-5 w-5" alt="" /> Services</span>
+							<span className="flex items-center justify-center gap-2 text-white/50 text-sm"><Image alt='' height={20} width={20} className="h-5 w-5" src="/icons/services.svg" /> Services</span>
 							<p className="text-center font-semibold mt-1">Solutions Suite</p>
 						</div>
 						<div>
@@ -88,7 +89,7 @@ const Desktop = () => {
 								<h3 className="text-3xl font-bold plus">+</h3>
 							</div>
 							<div className="w-full rounded-full bg-secondary/50 border border-secondary px-2 py-1.5 text-center">
-								<p className="h-max flex gap-1 items-center justify-center text-xs font-semibold text-grey"><img className="h-[18px] w-[18px]" src="/icons/projects.svg" alt="" />Projects</p>
+								<p className="h-max flex gap-1 items-center justify-center text-xs font-semibold text-grey"><Image className="h-[18px] w-[18px]" height={18} width={18} src="/icons/projects.svg" alt="" />Projects</p>
 							</div>
 						</MotionDiv>
 
@@ -102,7 +103,7 @@ const Desktop = () => {
 								<h3 className="text-3xl font-bold plus">+</h3>
 							</div>
 							<div className="w-full rounded-full bg-secondary/50 border border-secondary px-2 py-1.5 text-center">
-								<p className="h-max flex gap-1 items-center justify-center text-xs font-semibold text-grey"><img className="h-[18px] w-[18px]" src="/icons/happy.svg" alt="" />Happy Clients</p>
+								<p className="h-max flex gap-1 items-center justify-center text-xs font-semibold text-grey"><Image height={18} width={18} className="h-[18px] w-[18px]" src="/icons/happy.svg" alt="" />Happy Clients</p>
 							</div>
 						</MotionDiv>
 						<MotionDiv variants={variants} initial='hidden' animate='visible' viewport={{ amount: 0 }} transition={{
@@ -115,7 +116,7 @@ const Desktop = () => {
 								<h3 className="text-3xl font-bold plus">+</h3>
 							</div>
 							<div className="w-full rounded-full bg-secondary/50 border border-secondary px-2 py-1.5 text-center">
-								<p className="h-max flex gap-1 items-center justify-center text-xs font-semibold text-grey"><img className="h-[18px] w-[18px]" src="/icons/experience.svg" alt="" />Year Expertise</p>
+								<p className="h-max flex gap-1 items-center justify-center text-xs font-semibold text-grey"><Image height={18} width={18} className="h-[18px] w-[18px]" src="/icons/experience.svg" alt="" />Year Expertise</p>
 							</div>
 						</MotionDiv>
 
@@ -128,8 +129,8 @@ const Desktop = () => {
 					}} className="row-span-4 bento-item">
 						<div className="flex flex-col">
 							<div className="flex gap-4">
-								<img className="h-[105px] w-[100px] object-cover rounded-2xl bg-[#A290FC]" src="/assets/main.png" alt="" />
-								{/* <img className="h-[105px] w-[100px] object-cover rounded-2xl bg-[#A290FC]" src="/mrudul.png" alt="" /> */}
+								<Image height={105} width={100} className="object-cover rounded-2xl bg-[#A290FC]" src="/assets/main.png" alt="" />
+								{/* <Image className="h-[105px] w-[100px] object-cover rounded-2xl bg-[#A290FC]" src="/mrudul.png" alt="" /> */}
 								<div className='flex items-start justify-center flex-col w-full'>
 									<div className='flex items-center justify-between w-full'>
 										<div className="h-max text-gray-400 font-semibold bg-secondary p-2 px-5 rounded-full w-max text-sm flex items-center">
@@ -139,7 +140,7 @@ const Desktop = () => {
 											</div>
 											<p>Available to work</p>
 										</div>
-										<div className='flex items-center justify-center gap-2 text-gray-400 cursor-pointer'><p className='text-sm font-bold'>Resume</p><a target='_blank' href='https://drive.google.com/file/d/1XexD-AolcCHFnj90mdL36uAsokN01XOG/view?usp=drive_link' className='h-8 w-8 rounded-lg bg-tertiary flex items-center justify-center'><img className='h-5 w-5' src="/icons/download.svg" alt="" /></a></div>
+										<div className='flex items-center justify-center gap-2 text-gray-400 cursor-pointer'><p className='text-sm font-bold'>Resume</p><a target='_blank' href='https://drive.google.com/file/d/1XexD-AolcCHFnj90mdL36uAsokN01XOG/view?usp=drive_link' className='h-8 w-8 rounded-lg bg-tertiary flex items-center justify-center'><Image height={20} width={20} className='h-5 w-5' src="/icons/download.svg" alt="" /></a></div>
 									</div>
 									<div className='flex flex-col items-start justify-center'>
 										<h2 className="mt-2 text-xl font-bold">Mrudul Kolambe</h2>
@@ -155,8 +156,8 @@ const Desktop = () => {
 								<AboutInfoCard img="/icons/good.svg" title="Good Boy" />
 							</div>
 							<div className="mt-3 gap-3 flex items-center">
-								<GlowButton child={<><img className="h-5 w-5" src="/icons/whatsapp.svg" /> <p>Whatsapp me</p></>} />
-								<GlowButton child={<><img className="h-5 w-5" src="/icons/email.svg" /> <p>Email me</p></>} />
+								<GlowButton child={<><Image alt='' height={20} width={20} className="h-5 w-5" src="/icons/whatsapp.svg" /> <p>Whatsapp me</p></>} />
+								<GlowButton child={<><Image alt='' height={20} width={20} className="h-5 w-5" src="/icons/email.svg" /> <p>Email me</p></>} />
 							</div>
 						</div>
 					</MotionDiv>
@@ -168,7 +169,7 @@ const Desktop = () => {
 						duration: 0.5
 					}} className="row-span-3 bento-item bento-item-flex">
 						<div className="flex items-center flex-col w-full">
-							<span className="flex items-center justify-center gap-2 text-white/50 text-sm"><img src="/icons/clients.svg" className="h-5 w-5" alt="" /> My Clients</span>
+							<span className="flex items-center justify-center gap-2 text-white/50 text-sm"><Image size={20} src="/icons/clients.svg" className="h-5 w-5" alt="" /> My Clients</span>
 							<p className="text-center font-semibold mt-1">Satisfied Partners</p>
 						</div>
 						<div className='w-full h-full relative flex items-center overflow-hidden'>
@@ -185,11 +186,20 @@ const Desktop = () => {
 							ease: 'easeInOut',
 							duration: 0.5
 						}} className="h-full bento-item col-span-5">
-							<div className="flex flex-col items-center px-5 overflow-hidden pb-3">
+							<div className="flex flex-col items-center overflow-hidden pb-3">
 								<span className="flex items-center justify-center gap-2 text-white/50 text-sm">
-									<img src="/icons/achievement.svg" className="h-5 w-5 object-cover" alt="" /> Accomplishments
+									<Image src="/icons/achievement.svg" size={20} className="object-cover" alt="" /> Pursuits
 								</span>
-								<p className="text-center font-semibold mt-1 overflow-hidden">Achievements</p>
+								<p className="text-center font-semibold mt-1 overflow-hidden">Innovative Projects</p>
+							</div>
+							<div className="pt-5 border-t px-2 gap-2.5 flex flex-col border-tertiary">
+								{
+									workflow.map((item) => {
+										return <WorkflowInfo key={item.title} title={item.title} desc={item.desc}>
+											<ServiceCard className="cursor-pointer w-full" title={item.title} img={item.img} />
+										</WorkflowInfo>
+									})
+								}
 							</div>
 
 						</MotionDiv>
@@ -200,7 +210,7 @@ const Desktop = () => {
 						}} className="h-full bento-item col-span-4 bento-item-flex px-0">
 							<div className="flex flex-col items-center px-5 overflow-hidden pb-3">
 								<span className="flex items-center justify-center gap-2 text-white/50 text-sm">
-									<img src="/icons/work_process.svg" className="h-5 w-5 object-cover" alt="" /> Work Process
+									<Image src="/icons/work_process.svg" size={20} className="object-cover" alt="" /> Work Process
 								</span>
 								<p className="text-center font-semibold mt-1 overflow-hidden">Workflow Highlights</p>
 							</div>
@@ -223,7 +233,7 @@ const Desktop = () => {
 						}} className="h-full bento-item col-span-4 px-0">
 							<div className="flex flex-col items-center px-5 overflow-hidden pb-3">
 								<span className="flex items-center justify-center gap-2 text-white/50 text-sm">
-									<img src="/icons/follow.svg" className="h-5 w-5 object-cover" alt="" /> Follow Me
+									<Image src="/icons/follow.svg" size={20} className="object-cover" alt="" /> Follow Me
 								</span>
 								<p className="text-center font-semibold mt-1 overflow-hidden">Online Presence</p>
 							</div>
@@ -241,15 +251,15 @@ const Desktop = () => {
 							duration: 0.5
 						}} className="h-full bento-item col-span-5 flex flex-col items-center justify-evenly">
 							<span className="h-[56px] w-[56px] bg-secondary flex items-center justify-center rounded-full">
-								<img className="h-[28px] w-[28px]" src="/icons/work_together.svg" alt="" />
+								<Image size={28} src="/icons/work_together.svg" alt="" />
 							</span>
 							<div className="mt-3">
 								<h2 className="text-lg font-bold text-white text-center">Let&apos;s Work Together</h2>
 								<p className="text-gray-400 text-sm text-center mt-1">Let&apos;s Make Magic Happen Together!</p>
 							</div>
 							<div className="flex flex-col mt-2 gap-2.5 w-full">
-								<a href="https://cal.com/mrudulkolambe/general-discussion" target='_blank'><GlowButton child={<><img className="h-5 w-5" src="/icons/schedule.svg" /> <p>Schedule Call</p></>} /></a>
-								<a href="https://wa.me/+917057094772"><GlowButton child={<><img className="h-5 w-5" src="/icons/whatsapp.svg" /> <p>Whatsapp me</p></>} /></a>
+								<a href="https://cal.com/mrudulkolambe/general-discussion" target='_blank'><GlowButton child={<><Image height={20} width={20} alt='' className="h-5 w-5" src="/icons/schedule.svg" /> <p>Schedule Call</p></>} /></a>
+								<a href="https://wa.me/+917057094772"><GlowButton child={<><Image height={20} width={20} alt='' className="h-5 w-5" src="/icons/whatsapp.svg" /> <p>Whatsapp me</p></>} /></a>
 							</div>
 						</MotionDiv>
 					</div>

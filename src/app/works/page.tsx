@@ -3,6 +3,7 @@ import StackCard from '@/components/StackCard'
 import WorkflowInfo from '@/components/WorkflowInfo'
 import skills from '@/utils/skills'
 import workflow from '@/utils/workflow'
+import Image from 'next/image'
 import React from 'react'
 
 const Works = () => {
@@ -15,7 +16,7 @@ const Works = () => {
 					<div className='bento-item row-span-8'>
 						<div className="flex flex-col items-center px-5 overflow-hidden pb-3">
 							<span className="flex items-center justify-center gap-2 text-white/50 text-sm">
-								<img src="/icons/skills.svg" className="h-5 w-5 object-cover" alt="" /> My Skills
+								<Image src={"/icons/skills.svg"} height={20} width={20} className="object-cover" alt={"Image"} priority draggable={'false'} /> My Skills
 							</span>
 							<p className="text-center font-semibold mt-1 overflow-hidden">My Hardcore Skills</p>
 						</div>
@@ -24,7 +25,7 @@ const Works = () => {
 								skills.map((item) => {
 									return <div className="small-card flex justify-between group items-center pr-3 bg-opacity-50 border-tertiary/80 border">
 										<div className='flex items-center justify-start gap-2' >
-											<span className="h-9 w-9 flex items-center justify-center bg-white/10 rounded-xl"><img className="h-5 w-5" src={item.img} alt="" /></span>
+											<span className="h-9 w-9 flex items-center justify-center bg-white/10 rounded-xl"><Image height={20} width={20} className="h-5 w-5" src={item.img} alt="" /></span>
 											{item.title}
 										</div >
 										<div className='px-3 py-2 rounded-lg bg-tertiary/50'><p className='text-xs text-gray-400'>{item.useage}</p></div>

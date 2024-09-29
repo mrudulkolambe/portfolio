@@ -1,5 +1,6 @@
 import React from 'react'
 import { ArrowRight } from 'lucide-react'
+import Image from 'next/image'
 
 const StackCard = ({ title, link, img }: {
 	title: string,
@@ -11,7 +12,7 @@ const StackCard = ({ title, link, img }: {
 			{
 				link ? <a href={link} target='_blank' className="small-card flex justify-between group items-center pr-3">
 					<div className='flex items-center justify-start gap-2' >
-						<span className="h-9 w-9 flex items-center justify-center bg-white/10 rounded-xl"><img className="h-5 w-5" src={img} alt="" /></span>
+						<span className="h-9 w-9 flex items-center justify-center bg-white/10 rounded-xl"><Image src={img} height={20} width={20} className="h-5 w-5" alt="" /></span>
 						{title}
 					</div >
 					<ArrowRight className='link-animate text-sm h-4 w-4 hidden lg:flex' />
@@ -19,7 +20,7 @@ const StackCard = ({ title, link, img }: {
 				</a> :
 					<div className="small-card flex justify-between group items-center w-max">
 						<div className='flex items-center justify-start gap-2' >
-							<span className="h-9 w-9 flex items-center justify-center bg-white/10 rounded-xl"><img className="h-5 w-5" src={img} alt="" /></span>
+							<span className="h-9 w-9 flex items-center justify-center bg-white/10 rounded-xl"><Image src={img} height={20} width={20} className="h-5 w-5" alt="" /></span>
 							{title}
 						</div>
 					</div>
