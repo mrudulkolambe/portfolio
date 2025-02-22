@@ -1,8 +1,4 @@
-import ServiceCard from '@/components/ServiceCard'
-import StackCard from '@/components/StackCard'
-import WorkflowInfo from '@/components/WorkflowInfo'
 import skills from '@/utils/skills'
-import workflow from '@/utils/workflow'
 import Image from 'next/image'
 import React from 'react'
 
@@ -23,7 +19,7 @@ const Works = () => {
 						<div className="pt-5 border-t gap-2.5 flex flex-col border-tertiary">
 							{
 								skills.map((item) => {
-									return <div className="small-card flex justify-between group items-center pr-3 bg-opacity-50 border-tertiary/80 border">
+									return <div key={item.img} className="small-card flex justify-between group items-center pr-3 bg-opacity-50 border-tertiary/80 border">
 										<div className='flex items-center justify-start gap-2' >
 											<span className="h-9 w-9 flex items-center justify-center bg-white/10 rounded-xl"><Image height={20} width={20} className="h-5 w-5" src={item.img} alt="" /></span>
 											{item.title}
