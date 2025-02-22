@@ -129,7 +129,9 @@ const Desktop = () => {
 					}} className="row-span-4 bento-item">
 						<div className="flex flex-col">
 							<div className="flex gap-4">
-								<Image height={105} width={100} className="object-cover rounded-2xl bg-[#A290FC]" src="/assets/main.png" alt="" />
+								<div className='h-[105px] w-[105px] aspect-square flex items-end justify-center rounded-xl bg-[#A290FC]'>
+									<Image height={90} width={90} className="grayscale" src="/assets/main_img.png" alt="" />
+								</div>
 								{/* <Image className="h-[105px] w-[100px] object-cover rounded-2xl bg-[#A290FC]" src="/mrudul.png" alt="" /> */}
 								<div className='flex items-start justify-center flex-col w-full'>
 									<div className='flex items-center justify-between w-full'>
@@ -195,11 +197,16 @@ const Desktop = () => {
 							<div className="pt-5 border-t px-2 gap-2.5 flex flex-col border-tertiary">
 								{
 									workflow.map((item) => {
+										return <ServiceCard className="cursor-pointer w-full" title={item.title} img={item.img} />
+									})
+								}
+								{/* {
+									workflow.map((item) => {
 										return <WorkflowInfo key={item.title} title={item.title} desc={item.desc}>
 											<ServiceCard className="cursor-pointer w-full" title={item.title} img={item.img} />
 										</WorkflowInfo>
 									})
-								}
+								} */}
 							</div>
 
 						</MotionDiv>
@@ -217,11 +224,16 @@ const Desktop = () => {
 							<div className="pt-5 border-t px-5 gap-2.5 flex flex-col border-tertiary">
 								{
 									workflow.map((item) => {
+										return <ServiceCard className="cursor-pointer w-full" title={item.title} img={item.img} />
+									})
+								}
+								{/* {
+									workflow.map((item) => {
 										return <WorkflowInfo key={item.title} title={item.title} desc={item.desc}>
 											<ServiceCard className="cursor-pointer w-full" title={item.title} img={item.img} />
 										</WorkflowInfo>
 									})
-								}
+								} */}
 							</div>
 						</MotionDiv>
 					</div>
