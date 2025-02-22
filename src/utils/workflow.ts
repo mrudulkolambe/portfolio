@@ -1,6 +1,6 @@
 const workflow = [
 	{
-		title: "Requirements Analysis",
+		title: "Requirements A.",
 		img: '/icons/analysis.svg',
 		desc: "Defining functional and non-functional specifications to ensure the project meets user needs and business objectives."
 	},

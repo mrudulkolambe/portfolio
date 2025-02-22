@@ -21,9 +21,9 @@ const Desktop = () => {
 		visible: { opacity: 1 }
 	}
 	return (
-		<main className="lg:flex h-screen w-screen flex-col items-center justify-center px-8 hidden">
+		<main className="lg:flex h-screen w-screen flex-col items-center justify-center px-8 hidden py-8">
 
-			<div className="gap-3 grid grid-cols-12 w-full h-max">
+			<div className="gap-3 grid grid-cols-12 w-full h-full">
 				<div className="h-full col-span-3 main gap-3 flex flex-col">
 
 					<MotionDiv variants={variants} initial='hidden' animate='visible' viewport={{ amount: 0 }} transition={{
@@ -52,9 +52,9 @@ const Desktop = () => {
 							<p className="text-center font-semibold mt-1">Works Gallery</p>
 						</div>
 						<WorkSlider />
-						<div className="absolute bottom-8 z-[10] left-1/2 -translate-x-1/2 p-1 rounded-xl bg-tertiary/70 backdrop-blur-md w-max">
+						{/* <div className="absolute bottom-8 z-[10] left-1/2 -translate-x-1/2 p-1 rounded-xl bg-tertiary/70 backdrop-blur-md w-max">
 							<Link href={"/works"}><button className="text-sm purple-button px-7 py-2.5 text-black/80 font-semibold rounded-xl">View Works</button></Link>
-						</div>
+						</div> */}
 					</MotionDiv>
 					<MotionDiv variants={variants} initial='hidden' animate='visible' viewport={{ amount: 0 }} transition={{
 						delay: 0.30,
@@ -68,9 +68,9 @@ const Desktop = () => {
 						<div>
 							<ServiceSlider />
 						</div>
-						<div className="absolute bottom-8 z-[10] left-1/2 -translate-x-1/2 p-1 rounded-xl bg-tertiary/70 backdrop-blur-md w-max">
+						{/* <div className="absolute bottom-8 z-[10] left-1/2 -translate-x-1/2 p-1 rounded-xl bg-tertiary/70 backdrop-blur-md w-max">
 							<button className="text-sm purple-button px-7 py-2.5 text-black/80 font-semibold rounded-xl">View Services</button>
-						</div>
+						</div> */}
 					</MotionDiv>
 
 				</div>
@@ -103,7 +103,7 @@ const Desktop = () => {
 								<h3 className="text-3xl font-bold plus">+</h3>
 							</div>
 							<div className="w-full rounded-full bg-secondary/50 border border-secondary px-2 py-1.5 text-center">
-								<p className="h-max flex gap-1 items-center justify-center text-xs font-semibold text-grey"><Image height={18} width={18} className="h-[18px] w-[18px]" src="/icons/happy.svg" alt="" />Happy Clients</p>
+								<p className="h-max flex gap-1 items-center justify-center text-xs font-semibold text-grey"><Image height={18} width={18} className="h-[18px] w-[18px]" src="/icons/happy.svg" alt="" />Clients</p>
 							</div>
 						</MotionDiv>
 						<MotionDiv variants={variants} initial='hidden' animate='visible' viewport={{ amount: 0 }} transition={{
@@ -116,7 +116,7 @@ const Desktop = () => {
 								<h3 className="text-3xl font-bold plus">+</h3>
 							</div>
 							<div className="w-full rounded-full bg-secondary/50 border border-secondary px-2 py-1.5 text-center">
-								<p className="h-max flex gap-1 items-center justify-center text-xs font-semibold text-grey"><Image height={18} width={18} className="h-[18px] w-[18px]" src="/icons/experience.svg" alt="" />Year Expertise</p>
+								<p className="h-max flex gap-1 items-center justify-center text-xs font-semibold text-grey"><Image height={18} width={18} className="h-[18px] w-[18px]" src="/icons/experience.svg" alt="" />Experience</p>
 							</div>
 						</MotionDiv>
 
@@ -155,7 +155,6 @@ const Desktop = () => {
 								<AboutInfoCard img="/icons/language.svg" title="English & Hindi" />
 								<AboutInfoCard img="/icons/degree.svg" title="Computer Engineer" />
 								<AboutInfoCard img="/icons/freelancer.svg" title="Freelancer" />
-								<AboutInfoCard img="/icons/good.svg" title="Good Boy" />
 							</div>
 							<div className="mt-3 gap-3 flex items-center">
 								<GlowButton child={<><Image alt='' height={20} width={20} className="h-5 w-5" src="/icons/whatsapp.svg" /> <p>Whatsapp me</p></>} />
@@ -183,21 +182,40 @@ const Desktop = () => {
 
 				<div className="h-full col-span-5 grid grid-rows-9 gap-3">
 					<div className="h-full row-span-5 grid grid-cols-9 gap-3">
+					<MotionDiv variants={variants} initial='hidden' animate='visible' viewport={{ amount: 0 }} transition={{
+							delay: 1.0,
+							ease: 'easeInOut',
+							duration: 0.5
+						}} className="h-full bento-item col-span-5 bento-item-flex px-0">
+							<div className="flex flex-col items-center px-5 overflow-hidden pb-3">
+								<span className="flex items-center justify-center gap-2 text-white/50 text-sm">
+								<Image src="https://framerusercontent.com/images/m97ZHlsQYC6JqWKtJGEUOvPdbA.svg" size={20} className="object-cover" alt="" /> In Progress
+								</span>
+								<p className="text-center font-semibold mt-1 overflow-hidden">Current Build</p>
+							</div>
+							<div className="pt-5 border-t px-5 gap-2.5 flex flex-col border-tertiary">
+								<div className='p-3 bg-secondary rounded-lg flex flex-col'>
+									<img className='aspect-video object-cover  rounded-lg' src="https://framerusercontent.com/images/PD46kadjdczEg3DN1HpEBRRjvXo.jpg" alt="" />
+									<h4 className='mt-2 font-semibold'>DBdraw</h4>
+									<p className='mt-1 text-white/50 text-xs'>Schema visualizer</p>
+								</div>
+							</div>
+						</MotionDiv>
 						<MotionDiv variants={variants} initial='hidden' animate='visible' viewport={{ amount: 0 }} transition={{
 							delay: 0.90,
 							ease: 'easeInOut',
 							duration: 0.5
-						}} className="h-full bento-item col-span-5">
+						}} className="h-full bento-item col-span-4 px-0">
 							<div className="flex flex-col items-center overflow-hidden pb-3">
 								<span className="flex items-center justify-center gap-2 text-white/50 text-sm">
-									<Image src="/icons/achievement.svg" size={20} className="object-cover" alt="" /> Pursuits
+								<Image src="/icons/work_process.svg" size={20} className="object-cover" alt="" /> Work Process
 								</span>
-								<p className="text-center font-semibold mt-1 overflow-hidden">Innovative Projects</p>
+								<p className="text-center font-semibold mt-1 overflow-hidden">Workflow Highlights</p>
 							</div>
-							<div className="pt-5 border-t px-2 gap-2.5 flex flex-col border-tertiary">
+							<div className="pt-5 border-t gap-2.5 flex flex-col border-tertiary px-5">
 								{
 									workflow.map((item) => {
-										return <ServiceCard className="cursor-pointer w-full" title={item.title} img={item.img} />
+										return <ServiceCard key={item.title} className="cursor-pointer w-full" title={item.title} img={item.img} />
 									})
 								}
 								{/* {
@@ -210,32 +228,7 @@ const Desktop = () => {
 							</div>
 
 						</MotionDiv>
-						<MotionDiv variants={variants} initial='hidden' animate='visible' viewport={{ amount: 0 }} transition={{
-							delay: 1.0,
-							ease: 'easeInOut',
-							duration: 0.5
-						}} className="h-full bento-item col-span-4 bento-item-flex px-0">
-							<div className="flex flex-col items-center px-5 overflow-hidden pb-3">
-								<span className="flex items-center justify-center gap-2 text-white/50 text-sm">
-									<Image src="/icons/work_process.svg" size={20} className="object-cover" alt="" /> Work Process
-								</span>
-								<p className="text-center font-semibold mt-1 overflow-hidden">Workflow Highlights</p>
-							</div>
-							<div className="pt-5 border-t px-5 gap-2.5 flex flex-col border-tertiary">
-								{
-									workflow.map((item) => {
-										return <ServiceCard className="cursor-pointer w-full" title={item.title} img={item.img} />
-									})
-								}
-								{/* {
-									workflow.map((item) => {
-										return <WorkflowInfo key={item.title} title={item.title} desc={item.desc}>
-											<ServiceCard className="cursor-pointer w-full" title={item.title} img={item.img} />
-										</WorkflowInfo>
-									})
-								} */}
-							</div>
-						</MotionDiv>
+					
 					</div>
 					<div className="h-full row-span-4 grid grid-cols-9 gap-3">
 						<MotionDiv variants={variants} initial='hidden' animate='visible' viewport={{ amount: 0 }} transition={{

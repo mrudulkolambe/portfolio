@@ -37,7 +37,6 @@ const Mobile = () => {
 						<AboutInfoCard img="/icons/language.svg" title="English & Hindi" />
 						<AboutInfoCard img="/icons/degree.svg" title="Computer Engineer" />
 						<AboutInfoCard img="/icons/freelancer.svg" title="Freelancer" />
-						<AboutInfoCard img="/icons/good.svg" title="Good Boy" />
 					</div>
 					<div className="mt-3 gap-3 flex items-center">
 						<GlowButton child={<><Image size={20} alt='' src="/icons/whatsapp.svg" /> <p>Whatsapp me</p></>} />
@@ -90,7 +89,7 @@ const Mobile = () => {
 					<p className="text-center font-semibold mt-1">Tech Arsenal</p>
 				</div>
 				<div className="grid grid-cols-2 gap-3 w-full h-max mt-3">
-					<StackCard img="/assets/nextjs.svg" link="https://nextjs.org/" title="NextJS" />
+					<StackCard img="/assets/nextjs.svg" link="https://next.org/" title="NextJS" />
 					<StackCard img="/assets/react.svg" link="https://react.dev/" title="ReactJS" />
 					<StackCard img="/assets/tailwind.svg" link="https://tailwindcss.com/" title="Tailwind" />
 					<StackCard img="/assets/flutter.svg" link="https://flutter.dev/" title="Flutter" />
@@ -103,9 +102,9 @@ const Mobile = () => {
 					<p className="text-center font-semibold mt-1">Works Gallery</p>
 				</div>
 				<WorkSlider />
-				<div className="absolute bottom-8 z-[10] left-1/2 -translate-x-1/2 p-1 rounded-xl bg-tertiary/70 backdrop-blur-md w-max">
+				{/* <div className="absolute bottom-8 z-[10] left-1/2 -translate-x-1/2 p-1 rounded-xl bg-tertiary/70 backdrop-blur-md w-max">
 					<button className="text-sm purple-button px-7 py-2.5 text-black/80 font-semibold rounded-xl">View Works</button>
-				</div>
+				</div> */}
 			</div>
 
 			<div className="bento-item bento-item-flex relative gap-5 px-0">
@@ -116,9 +115,9 @@ const Mobile = () => {
 				<div>
 					<ServiceSlider />
 				</div>
-				<div className="absolute bottom-8 z-[10] left-1/2 -translate-x-1/2 p-1 rounded-xl bg-tertiary/70 backdrop-blur-md w-max">
+				{/* <div className="absolute bottom-8 z-[10] left-1/2 -translate-x-1/2 p-1 rounded-xl bg-tertiary/70 backdrop-blur-md w-max">
 					<button className="text-sm purple-button px-7 py-2.5 text-black/80 font-semibold rounded-xl">View Services</button>
-				</div>
+				</div> */}
 			</div>
 
 			<div className="h-full bento-item bento-item-flex px-0">
@@ -136,6 +135,22 @@ const Mobile = () => {
 							</WorkflowInfo>
 						})
 					}
+				</div>
+			</div>
+
+			<div className="h-full bento-item bento-item-flex px-0">
+				<div className="flex flex-col items-center px-5 overflow-hidden pb-3">
+					<span className="flex items-center justify-center gap-2 text-white/50 text-sm">
+						<Image src="https://framerusercontent.com/images/m97ZHlsQYC6JqWKtJGEUOvPdbA.svg" size={20} className="object-cover" alt="" /> In Progress
+					</span>
+					<p className="text-center font-semibold mt-1 overflow-hidden">Current Build</p>
+				</div>
+				<div className="pt-5 border-t px-3 gap-2.5 flex flex-col border-tertiary">
+					<div className='p-3 bg-secondary rounded-2xl flex flex-col'>
+						<img className='aspect-video object-cover  rounded-lg' src="https://framerusercontent.com/images/PD46kadjdczEg3DN1HpEBRRjvXo.jpg" alt="" />
+						<h4 className='mt-2 font-semibold'>DBdraw</h4>
+						<p className='mt-1 text-white/50 text-xs'>Schema visualizer</p>
+					</div>
 				</div>
 			</div>
 

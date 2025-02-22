@@ -4,6 +4,7 @@ const clients = [
 	"/clients/chintamani.svg",
 	"/clients/oceanblue.svg",
 	"/clients/quintessentials.svg",
+	"/clients/outreach.svg"
 ]
 
 export default clients;
